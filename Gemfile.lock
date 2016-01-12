@@ -14,10 +14,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.8)
     arel (6.0.0)
     backports (3.6.4)
     builder (3.2.2)
+    byebug (8.2.0)
     daemons (1.2.2)
     diff-lcs (1.2.5)
     eventmachine (1.0.7)
@@ -76,9 +76,6 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    validate_url (1.0.2)
-      activemodel (>= 3.0.0)
-      addressable
 
 PLATFORMS
   ruby
@@ -86,6 +83,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
+  byebug
   pg
   puma
   rails_12factor
@@ -96,7 +94,6 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-contrib
   thin
-  validate_url
 
 BUNDLED WITH
    1.10.6

@@ -1,14 +1,27 @@
-<h1>Welcome to URL Shortener</h1>
 <p>Place in URL below</p>
+<h3>
+  <form class="center" action = "/urls" method = "POST" >
+  	Enter URL:
 
-<form action = "/urls" method = "post" >
-	Enter URL:
+  	<input img id = 'a' type = "text" placeholder = "Don type anything here PLS !!! >_<'" style ="width:500px;height: 40px" class="myFontStyle" name = "long_url" required>
+  	<input type = "submit" value = "Submit" class="button">›
+  </form>
+</h3>	
 
-	<input type = "text" name = "long_url">
-	<input type = "submit" value = "Submit">
-</form>
-	
-
-	<% @urls.each do |url| %>
-		<%= url.long_url %> - <a href=<%= url.short_url %>><%= url.short_url %><a><br>
-		<% end %>
+<table class="center">
+  <tr>
+    <th> &nbsp ID &nbsp </th>
+    <th> &nbsp Long Url &nbsp </th>
+    <th> &nbsp Short Url &nbsp </th>
+    <th> &nbsp Click Count &nbsp </th>
+    <% @urls.each_with_index do |url,index| %>
+  </tr>
+  <tr>
+    <td><center><%= index + 1 %></td>
+    <td><center> &nbsp <%= url.long_url %> &nbsp </td>
+    <td><center><a href=<%= url.short_url %>>
+		<%= url.short_url %></td>
+    <td><center><%= url.click_count %></td>
+  </tr>
+  <% end %>
+</table>

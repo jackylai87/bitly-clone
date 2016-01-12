@@ -1,0 +1,30 @@
+<html>
+<head>
+<title><%= @title || "URL Shortener" %></title>
+<link rel="stylesheet" type="text/css" href="/css/application.css">
+</head>
+<body>
+  <h1>
+    <a href="/"><img img id = "p" src="../img/p.gif" alt="Pikachu!!" style="width:48px;height:48px;"></a>
+    Welcome to URL Shortener 
+  </h1>
+
+	<%= yield %>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+<footer>
+	<div class="foot1">
+  		<p>Posted by: Jacky®</p>
+  		<p>Contact information: <a href="mailto:someone@mail.com">
+  		CLICK ME PLEASE</a>
+  		<div class="music_player">
+  		<audio controls autoplay loop>
+  		<source src="../song/abc.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+		</audio></div></p>
+  	</div>
+</footer>
+</html>
